@@ -4,6 +4,7 @@ app_publisher = "Task"
 app_description = "Task"
 app_email = "task@gmail.com"
 app_license = "mit"
+required_apps = ["frappe/erpnext"]
 
 # Apps
 # ------------------
