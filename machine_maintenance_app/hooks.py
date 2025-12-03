@@ -21,6 +21,15 @@ app_license = "mit"
 # 	}
 # ]
 
+
+
+
+after_migrate = ["machine_maintenance_app.setup.setup_fixtures"]
+
+after_install = "machine_maintenance_app.setup.setup_fixtures"
+after_uninstall = "machine_maintenance_app.setup.remove_custom_fields"
+
+
 # Includes in <head>
 # ------------------
 

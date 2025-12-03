@@ -1,0 +1,48 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-12-03 17:19:03.260575",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "company",
+  "maintenance_expense_account",
+  "cashbank_account"
+ ],
+ "fields": [
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "maintenance_expense_account",
+   "fieldtype": "Link",
+   "label": "Maintenance Expense account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "cashbank_account",
+   "fieldtype": "Link",
+   "label": "Cash/Bank account",
+   "options": "Account"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-12-03 17:20:23.078425",
+ "modified_by": "Administrator",
+ "module": "Machine Maintenance App",
+ "name": "Machine Maintenance Accounting",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
