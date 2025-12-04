@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:MM-.YYYY.-.####",
+ "autoname": "format:{MM}-{YYYY}-{####}",
  "creation": "2025-12-03 17:17:36.949156",
  "default_view": "List",
  "doctype": "DocType",
@@ -18,10 +18,16 @@
   "completion_date",
   "technician",
   "cost",
+  "journal_entry",
   "section_break_ewmw",
   "parts_used",
   "tab_2_tab",
-  "notes"
+  "notes",
+  "more_info_tab",
+  "accounting_details_section",
+  "expense_account",
+  "column_break_qosv",
+  "cash_bank_account"
  ],
  "fields": [
   {
@@ -50,6 +56,7 @@
    "label": "Maintenance Date"
   },
   {
+   "default": "Scheduled",
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "Status",
@@ -62,7 +69,8 @@
   {
    "fieldname": "maintenance_type",
    "fieldtype": "Select",
-   "label": "Maintenance Type"
+   "label": "Maintenance Type",
+   "options": "\nPreventive\nCorrective"
   },
   {
    "fieldname": "completion_date",
@@ -79,7 +87,8 @@
    "fieldname": "cost",
    "fieldtype": "Currency",
    "label": "Cost",
-   "options": "Currency"
+   "options": "Currency",
+   "read_only": 1
   },
   {
    "fieldname": "section_break_ewmw",
@@ -116,13 +125,46 @@
    "fieldtype": "Link",
    "label": "Company",
    "options": "Company"
+  },
+  {
+   "fieldname": "more_info_tab",
+   "fieldtype": "Tab Break",
+   "label": "More Info"
+  },
+  {
+   "fieldname": "expense_account",
+   "fieldtype": "Link",
+   "label": "Expense Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "column_break_qosv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cash_bank_account",
+   "fieldtype": "Link",
+   "label": "Cash Bank Account",
+   "options": "Account"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "accounting_details_section",
+   "fieldtype": "Section Break",
+   "label": "Accounting Details"
+  },
+  {
+   "fieldname": "journal_entry",
+   "fieldtype": "Link",
+   "label": "Journal Entry",
+   "options": "Journal Entry"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-12-03 18:10:14.760082",
+ "modified": "2025-12-04 21:47:13.921118",
  "modified_by": "Administrator",
  "module": "Machine Maintenance App",
  "name": "Machine Maintenance",
