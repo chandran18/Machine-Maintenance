@@ -31,6 +31,32 @@ after_install = "machine_maintenance_app.setup.setup_fixtures"
 after_uninstall = "machine_maintenance_app.setup.remove_custom_fields"
 
 
+
+
+doctype_js = {
+    "Item":"public/js/item.js",
+
+}
+
+
+fixtures = [
+    {"doctype": "Number Card"},
+    {"doctype": "Dashboard Chart"},
+    {"doctype": "Dashboard"},
+    {
+        "doctype": "Workflow",
+        "filters": [
+            ["document_type", "in", ["Machine Maintenance"]]
+        ]
+    },
+    {
+        "doctype": "Workflow State"
+    },
+    {
+        "doctype": "Workflow Action Master"
+    }
+]
+
 # Includes in <head>
 # ------------------
 
@@ -113,6 +139,11 @@ after_uninstall = "machine_maintenance_app.setup.remove_custom_fields"
 # -------------------
 # To clean up dependencies/integrations with other apps
 # Name of the app being uninstalled is passed as an argument
+scheduler_events = {
+    "daily": [
+        "machine_maintenance_app.machine_maintenance_app.machine_maintenance_app.doctype.utils.mark_overdue_maintenance"
+    ]
+}
 
 # before_app_uninstall = "machine_maintenance_app.utils.before_app_uninstall"
 # after_app_uninstall = "machine_maintenance_app.utils.after_app_uninstall"
