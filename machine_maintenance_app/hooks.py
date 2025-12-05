@@ -54,7 +54,13 @@ fixtures = [
     },
     {
         "doctype": "Workflow Action Master"
-    }
+    },
+    {
+        "doctype": "Role",
+        "filters": [
+            ["name", "in", ["Technician", "Maintenance Manager", "Operations Manager"]]
+        ]
+    },
 ]
 
 # Includes in <head>

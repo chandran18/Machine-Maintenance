@@ -194,6 +194,7 @@ def create_maintenance_journal_entry(self):
 	je.posting_date = self.maintenance_date or nowdate()
 	je.multi_currency = 1
 	je.user_remark = f"Machine Maintenance: {self.machine_name}"
+	je.machine_maintenance = self.name
 
 	je.append("accounts", {
 		"account": self.expense_account,
@@ -215,6 +216,6 @@ def create_maintenance_journal_entry(self):
 	je.insert(ignore_permissions=True)
 	je.submit()
 
-	self.db_set("journal_entry", je.name)
+	# self.db_set("journal_entry", je.name)
 
 	frappe.msgprint(f"Journal Entry <b>{je.name}</b> created successfully.")

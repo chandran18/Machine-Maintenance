@@ -57,6 +57,14 @@ CUSTOM_FIELDS = {
             # "description": "Used when Item-specific cash/bank account is not configured."
 
         }
-    ]
+    ],
+    "Journal Entry":{
+            "fieldname": "machine_maintenance",
+            "label": "Machine Maintenance",
+            "fieldtype": "Link",
+            "options": "Machine Maintenance",
+            "insert_after": "posting_date",
+            "hidden":1
+    }
 }
 

@@ -18,7 +18,6 @@
   "completion_date",
   "technician",
   "cost",
-  "journal_entry",
   "section_break_ewmw",
   "parts_used",
   "tab_2_tab",
@@ -26,6 +25,7 @@
   "more_info_tab",
   "accounting_details_section",
   "expense_account",
+  "journal_entry",
   "column_break_qosv",
   "cash_bank_account"
  ],
@@ -157,14 +157,20 @@
    "fieldname": "journal_entry",
    "fieldtype": "Link",
    "label": "Journal Entry",
-   "options": "Journal Entry"
+   "options": "Journal Entry",
+   "read_only": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
- "links": [],
- "modified": "2025-12-04 21:47:13.921118",
+ "links": [
+  {
+   "link_doctype": "Journal Entry",
+   "link_fieldname": "machine_maintenance"
+  }
+ ],
+ "modified": "2025-12-05 12:38:34.121178",
  "modified_by": "Administrator",
  "module": "Machine Maintenance App",
  "name": "Machine Maintenance",
@@ -180,6 +186,50 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Technician",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Maintenance Manager",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Operations Manager",
+   "select": 1,
    "share": 1,
    "submit": 1,
    "write": 1
